@@ -1,0 +1,65 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
+require 'optparse'
+
+require 'todo'
+
+DEFAULT_DATA_FILE = File.expand_path('../../data/items.todo', __FILE__)
+
+options = {}
+
+opt_parser = OptionParser.new do |opt|
+  opt.banner = "Usage: todo COMMAND [OPTIONS]"
+  opt.separator  ""
+  opt.separator  "Commands"
+  opt.separator  "     add: add task"
+  opt.separator  "     update: update task information"
+  opt.separator  "     complete: mark task as complete"
+  opt.separator  "     delete: delete task"
+  opt.separator  ""
+  opt.separator  "Options"
+
+  opt.on('-f', '--file FILE', 'which todo file to use') do |file|
+    options[:file] = file
+  end
+
+  opt.on('-i', '--identifier IDENTIFIER', 'the identifier to modify/add') do |identifier|
+    options[:identifier] = identifier
+  end
+
+  opt.on('-n', '--new-identifier IDENTIFIER', 'the new identifier to use') do |identifier|
+    options[:new_identifier] = identifier
+  end
+
+  opt.on('-e', '--estimation ESTIMATION', 'the estimated time') do |estimated_time|
+    options[:estimated_time] = estimated_time
+  end
+
+  opt.on('-p', '--priority PRIORITY', 'the priority') do |priority|
+    options[:priority] = priority
+  end
+
+  opt.on("-h","--help","help") do
+    puts opt_parser
+    exit 0
+  end
+end
+
+opt_parser.parse!
+
+@filename = options[:file] || DEFAULT_DATA_FILE
+
+case ARGV[0]
+when 'add'
+  Todo.add @filename, Todo::Task.new(options[:identifier], options[:estimated_time], options[:priority])
+when 'update'
+  Todo.update @filename, options[:identifier], options[:new_identifier], options[:estimated_time], options[:priority]
+when 'complete'
+  Todo.complete @filename, options[:identifier]
+when 'delete'
+  Todo.delete @filename, options[:identifier]
+end
+
+Todo.show(@filename)
