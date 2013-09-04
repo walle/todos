@@ -1,0 +1,14 @@
+# Format
+# * for not completed tasks - for completed
+# [*|-] [Identifier] -!- [Estimated time] -!- [Priority] -!- [Completed at]
+
+# Todos
+
+* Item 1 -!- 5 hours -!- Urgent
+* Item 2 -!- -!-
+* Item 3 -!- 2 minutes -!- Normal
+
+# Completed todos
+
+- Item 7 -!- 5 hours -!- Urgent -!- 2013-08-14 20:45:32 +0200
+- Item 9 -!- -!- -!- 2013-08-13 12:25:07 +0200

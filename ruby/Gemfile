@@ -1,0 +1,10 @@
+source 'https://rubygems.org'
+
+group :development do
+  gem 'yard'
+end
+
+group :test do
+  gem 'simplecov', require: false
+  gem 'rr', require: false
+end
