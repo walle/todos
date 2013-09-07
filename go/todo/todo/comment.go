@@ -1,9 +1,13 @@
 package todo
 
+import (
+  "strings"
+)
+
 type Comment struct {
   text string
 }
 
 func (comment *Comment) toString() string {
-  return "# " + comment.text
+  return "# " + strings.TrimSpace(comment.text)
 }
