@@ -4,6 +4,6 @@ type Spacer struct {
   character string
 }
 
-func (s *Spacer) toString() string {
-  return s.character
+func (spacer *Spacer) toString() string {
+  return spacer.character
 }
