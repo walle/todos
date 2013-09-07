@@ -2,6 +2,10 @@
 
 ## Building
 
+Install go
+
+    $ brew install go
+
 Set up your Go workspace according to the [How to Write Go Code](http://golang.org/doc/code.html) guide.
 
 Symlink the todo directory to your Go workspace src directory
