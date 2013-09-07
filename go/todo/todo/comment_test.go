@@ -6,16 +6,16 @@ import (
 
 func Test_CommentOutputsValidToString(t *testing.T) {
   expected := "# Test comment"
-  comment := Comment{"Test comment"}
-  if comment.toString() != expected {
-    t.Error("Comment output not valid: Expected {" + expected + "} was {" + comment.toString() + "}")
+  subject := Comment{"Test comment"}
+  if subject.toString() != expected {
+    t.Error("Expected {" + expected + "} was {" + subject.toString() + "}")
   }
 }
 
 func Test_CommentTextIsTrimmed(t *testing.T) {
   expected := "# Test comment"
-  comment := Comment{"  Test comment  "}
-  if comment.toString() != expected {
-    t.Error("Comment output not valid: Expected {" + expected + "} was {" + comment.toString() + "}")
+  subject := Comment{"  Test comment  "}
+  if subject.toString() != expected {
+    t.Error("Expected {" + expected + "} was {" + subject.toString() + "}")
   }
 }
