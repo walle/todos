@@ -1,9 +1,11 @@
 package todo
 
+// Item that represents a blank line
 type Spacer struct {
-  character string
+	character string
 }
 
+// Returns the spacer representation
 func (spacer *Spacer) String() string {
-  return spacer.character
+	return spacer.character
 }
