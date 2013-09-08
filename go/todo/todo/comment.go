@@ -8,6 +8,6 @@ type Comment struct {
   text string
 }
 
-func (comment *Comment) toString() string {
+func (comment *Comment) String() string {
   return "# " + strings.TrimSpace(comment.text)
 }

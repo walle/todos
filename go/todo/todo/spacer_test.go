@@ -4,10 +4,11 @@ import (
     "testing"
     )
 
-func Test_SpacerOutputsValidToString(t *testing.T) {
+func Test_SpacerOutputsValidString(t *testing.T) {
   expected := "\n"
   subject := Spacer{expected}
-  if subject.toString() != expected {
-    t.Error("Expected {" + expected + "} was {" + subject.toString() + "}")
+
+  if subject.String() != expected {
+    t.Error("Expected {" + expected + "} was {" + subject.String() + "}")
   }
 }

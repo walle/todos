@@ -4,18 +4,20 @@ import (
     "testing"
     )
 
-func Test_CommentOutputsValidToString(t *testing.T) {
+func Test_CommentOutputsValidString(t *testing.T) {
   expected := "# Test comment"
   subject := Comment{"Test comment"}
-  if subject.toString() != expected {
-    t.Error("Expected {" + expected + "} was {" + subject.toString() + "}")
+
+  if subject.String() != expected {
+    t.Error("Expected {" + expected + "} was {" + subject.String() + "}")
   }
 }
 
 func Test_CommentTextIsTrimmed(t *testing.T) {
   expected := "# Test comment"
   subject := Comment{"  Test comment  "}
-  if subject.toString() != expected {
-    t.Error("Expected {" + expected + "} was {" + subject.toString() + "}")
+
+  if subject.String() != expected {
+    t.Error("Expected {" + expected + "} was {" + subject.String() + "}")
   }
 }
