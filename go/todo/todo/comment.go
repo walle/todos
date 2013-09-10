@@ -10,6 +10,6 @@ type Comment struct {
 }
 
 // Returns the comment representation
-func (comment *Comment) String() string {
-	return "# " + strings.TrimSpace(comment.text)
+func (comment Comment) String() string {
+	return "# " + strings.TrimSpace(comment.text) + "\n"
 }

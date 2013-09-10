@@ -6,6 +6,6 @@ type Spacer struct {
 }
 
 // Returns the spacer representation
-func (spacer *Spacer) String() string {
+func (spacer Spacer) String() string {
 	return spacer.character
 }

@@ -1,23 +1,23 @@
 package todo
 
 import (
-    "testing"
-    )
+	"testing"
+)
 
 func Test_CommentOutputsValidString(t *testing.T) {
-  expected := "# Test comment"
-  subject := Comment{"Test comment"}
+	expected := "# Test comment\n"
+	subject := Comment{"Test comment"}
 
-  if subject.String() != expected {
-    t.Error("Expected {" + expected + "} was {" + subject.String() + "}")
-  }
+	if subject.String() != expected {
+		t.Error("Expected {" + expected + "} was {" + subject.String() + "}")
+	}
 }
 
 func Test_CommentTextIsTrimmed(t *testing.T) {
-  expected := "# Test comment"
-  subject := Comment{"  Test comment  "}
+	expected := "# Test comment\n"
+	subject := Comment{"  Test comment  "}
 
-  if subject.String() != expected {
-    t.Error("Expected {" + expected + "} was {" + subject.String() + "}")
-  }
+	if subject.String() != expected {
+		t.Error("Expected {" + expected + "} was {" + subject.String() + "}")
+	}
 }
