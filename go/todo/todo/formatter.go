@@ -13,3 +13,7 @@ func (formatter *Formatter) String() string {
 
 	return ret
 }
+
+func NewFormatter(items []Item) *Formatter {
+	return &Formatter{items}
+}
