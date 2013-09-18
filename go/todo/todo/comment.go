@@ -13,3 +13,7 @@ type Comment struct {
 func (comment Comment) String() string {
 	return "# " + strings.TrimSpace(comment.text) + "\n"
 }
+
+func NewComment(text string) Comment {
+	return Comment{text}
+}
