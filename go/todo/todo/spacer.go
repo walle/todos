@@ -11,6 +11,6 @@ func (spacer Spacer) String() string {
 }
 
 // Constructor function
-func NewSpacer() Spacer {
-	return Spacer{"\n"}
+func NewSpacer() *Spacer {
+	return &Spacer{"\n"}
 }
