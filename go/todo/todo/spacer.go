@@ -9,3 +9,8 @@ type Spacer struct {
 func (spacer Spacer) String() string {
 	return spacer.character
 }
+
+// Constructor function
+func NewSpacer() Spacer {
+	return Spacer{"\n"}
+}

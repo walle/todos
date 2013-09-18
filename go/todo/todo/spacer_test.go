@@ -1,14 +1,14 @@
 package todo
 
 import (
-    "testing"
-    )
+	"testing"
+)
 
 func Test_SpacerOutputsValidString(t *testing.T) {
-  expected := "\n"
-  subject := Spacer{expected}
+	expected := "\n"
+	subject := NewSpacer()
 
-  if subject.String() != expected {
-    t.Error("Expected {" + expected + "} was {" + subject.String() + "}")
-  }
+	if subject.String() != expected {
+		t.Error("Expected {" + expected + "} was {" + subject.String() + "}")
+	}
 }
