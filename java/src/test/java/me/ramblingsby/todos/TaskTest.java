@@ -45,7 +45,7 @@ public class TaskTest extends TestCase {
     String priority = "Low";
     String expectedOpen = "* " + identifier + " -!- " + estimatedTime + " -!- " + priority + "\n";
 
-    subject.update(identifier, estimatedTime, priority);
+    Task task = subject.update(identifier, estimatedTime, priority);
 
     assertEquals(expectedOpen, subject.toString());
   }

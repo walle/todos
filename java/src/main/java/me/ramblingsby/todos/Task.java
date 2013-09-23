@@ -66,17 +66,19 @@ public class Task implements Item  {
     return result;
   }
 
-  public void update(String identifier, String estimatedTime, String priority) {
-    update(identifier, estimatedTime, priority, null);
+  public Task update(String identifier, String estimatedTime, String priority) {
+    return update(identifier, estimatedTime, priority, null);
   }
 
-  public void update(String identifier, String estimatedTime, String priority, String completedAt) {
+  public Task update(String identifier, String estimatedTime, String priority, String completedAt) {
     this.identifier = identifier;
     this.estimatedTime = estimatedTime;
     this.priority = priority;
     if (completedAt != null) {
       this.completedAt = completedAt;
     }
+
+    return this;
   }
 
   public String getIdentifier() {
