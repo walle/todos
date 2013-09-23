@@ -31,4 +31,11 @@ public class TaskTest extends TestCase {
 
     Time.resetValueForCurrentTime();
   }
+
+  public void testEquality() throws Exception {
+    Task task1 = new Task("Item 1", "2 minutes", "Normal");
+    Task task2 = new Task("Item 1", "2 minutes", "Normal");
+
+    assertEquals(task1, task2);
+  }
 }
