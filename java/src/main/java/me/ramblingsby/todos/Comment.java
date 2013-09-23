@@ -1,6 +1,6 @@
 package me.ramblingsby.todos;
 
-public class Comment {
+public class Comment implements Item  {
 
   private String text;
 
@@ -10,6 +10,6 @@ public class Comment {
 
   @Override
   public String toString() {
-    return "# " + text;
+    return "# " + text + "\n";
   }
 }

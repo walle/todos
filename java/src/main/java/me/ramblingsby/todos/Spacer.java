@@ -1,6 +1,6 @@
 package me.ramblingsby.todos;
 
-public class Spacer {
+public class Spacer implements Item  {
 
   @Override
   public String toString() {

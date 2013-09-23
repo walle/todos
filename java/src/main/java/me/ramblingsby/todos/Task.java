@@ -1,8 +1,15 @@
 package me.ramblingsby.todos;
 
-public class Task {
+public class Task implements Item  {
 
   private String identifier, estimatedTime, priority, completedAt;
+
+  public Task(String identifier) {
+    this.identifier = identifier;
+    this.estimatedTime = "";
+    this.priority = "";
+    this.completedAt = null;
+  }
 
   public Task(String identifier, String estimatedTime, String priority) {
     this.identifier = identifier;

@@ -14,12 +14,12 @@ public class CommentTest extends TestCase {
   }
 
   public void testOutputsValidToString() {
-    assertEquals("# " + text, subject.toString());
+    assertEquals("# " + text + "\n", subject.toString());
   }
 
   public void testTrimsCommentText() throws Exception {
     String textWithSpaces = "  This is a comment  ";
     subject = new Comment(textWithSpaces);
-    assertEquals("# " + text, subject.toString());
+    assertEquals("# " + text + "\n", subject.toString());
   }
 }
