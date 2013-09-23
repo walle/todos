@@ -78,4 +78,20 @@ public class Task implements Item  {
       this.completedAt = completedAt;
     }
   }
+
+  public String getIdentifier() {
+    return identifier;
+  }
+
+  public String getEstimatedTime() {
+    return estimatedTime;
+  }
+
+  public String getPriority() {
+    return priority;
+  }
+
+  public String getCompletedAt() {
+    return completedAt;
+  }
 }
