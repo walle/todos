@@ -38,4 +38,15 @@ public class TaskTest extends TestCase {
 
     assertEquals(task1, task2);
   }
+
+  public void testCanBeUpdated() throws Exception {
+    String identifier = "Item 2";
+    String estimatedTime = "6 hours";
+    String priority = "Low";
+    String expectedOpen = "* " + identifier + " -!- " + estimatedTime + " -!- " + priority + "\n";
+
+    subject.update(identifier, estimatedTime, priority);
+
+    assertEquals(expectedOpen, subject.toString());
+  }
 }

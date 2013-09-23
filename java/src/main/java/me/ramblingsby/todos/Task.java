@@ -58,4 +58,17 @@ public class Task {
     result = 31 * result + (completedAt != null ? completedAt.hashCode() : 0);
     return result;
   }
+
+  public void update(String identifier, String estimatedTime, String priority) {
+    update(identifier, estimatedTime, priority, null);
+  }
+
+  public void update(String identifier, String estimatedTime, String priority, String completedAt) {
+    this.identifier = identifier;
+    this.estimatedTime = estimatedTime;
+    this.priority = priority;
+    if (completedAt != null) {
+      this.completedAt = completedAt;
+    }
+  }
 }
